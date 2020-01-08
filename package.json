@@ -1,16 +1,42 @@
 {
   "name": "jquery-react-autocomplete",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "https://github.com/Shavron/jquery-react-autocomplete",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shavron/jquery-react-autocomplete.git"
+  },
+  "keywords": [
+    "react",
+    "react autocomplete",
+    "react jquery autocomplete",
+    "jquery react autocomplete",
+    "autocomplete",
+    "autocomplete with jquery",
+    "web"
+  ],
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "jquery": "^3.4.1",
+    "jquery-ui-bundle": "^1.12.1-migrate"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.0"
   },
   "scripts": {
+    "publish": "rm -rf dist && mkdir dist &&  babel src -d dist --copy-files",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

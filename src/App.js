@@ -1,25 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from 'react';
+import JqueryAutocomplete from "./JqueryAutocomplete"
+
 
 function App() {
+  const[sourceCity,setsourceCity]  = useState({});
+
+  const handleSourceCitySelect = (value) => {
+    setsourceCity(value);
+    console.log(value);
+  }  
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="col-sm-6 pad-3">
+    <JqueryAutocomplete inputProps={{id : 'sourceCity',label:'City: ',value:sourceCity.label || ''}} onSourceSelect={handleSourceCitySelect}/>
+  </div>
   );
 }
 
