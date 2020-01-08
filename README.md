@@ -31,7 +31,24 @@ Available Props are
 | inputProps       | Object  | {id : 'sourceCity',label:'City: ',value:sourceCity.label || ''}    |
 | onSourceSelect   | Function| Function to get the selected city                                  |
 
-enableDays has no effect if enableScroll is true.
+
+
+This autocomplete assumes API data like:
+```
+        {city_name: "Bangalore", city_id: 1001968, city_label: "Bangalore (All Locations)"}
+```
+You can change autocomplete below section, if needed...
+```
+        $.map(data.city_list, function(item) {
+            return {
+            label: item.city_label,
+            value: item.city_name,
+            name: item.city_name,
+            code: item.city_id
+        };
+```
+
+
 
 Example:
 
