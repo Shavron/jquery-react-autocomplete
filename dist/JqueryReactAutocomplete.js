@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import $ from "jquery";
 import "jquery-ui-bundle/jquery-ui";
 import "jquery-ui-bundle/jquery-ui.css";
+import './JqueryReactAutocomplete.css';
 export default function JqueryReactAutocomplete({
   inputProps,
   onSourceSelect

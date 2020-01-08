@@ -1,12 +1,13 @@
 {
   "name": "jquery-react-autocomplete",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "private": false,
   "homepage": "https://github.com/Shavron/jquery-react-autocomplete",
   "repository": {
     "type": "git",
     "url": "https://github.com/Shavron/jquery-react-autocomplete.git"
   },
+  "main": "./dist/JqueryReactAutocomplete.js",
   "keywords": [
     "react",
     "react autocomplete",
