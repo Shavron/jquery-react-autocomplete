@@ -4,7 +4,7 @@ import "jquery-ui-bundle/jquery-ui";
 import "jquery-ui-bundle/jquery-ui.css";
 
 
-export default function JqueryAutocomplete({ inputProps, onSourceSelect }) {
+export default function JqueryReactAutocomplete({ inputProps, onSourceSelect }) {
   
   useEffect(() => {
     try {

@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import JqueryAutocomplete from "./JqueryAutocomplete"
+import JqueryReactAutocomplete from "./JqueryReactAutocomplete"
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="col-sm-6 pad-3">
-    <JqueryAutocomplete inputProps={{id : 'sourceCity',label:'City: ',value:sourceCity.label || ''}} onSourceSelect={handleSourceCitySelect}/>
+    <JqueryReactAutocomplete inputProps={{id : 'sourceCity',label:'City: ',value:sourceCity.label || ''}} onSourceSelect={handleSourceCitySelect}/>
   </div>
   );
 }

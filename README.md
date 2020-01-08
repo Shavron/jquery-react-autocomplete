@@ -5,8 +5,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 In the project directory, you can run:
 
 ## jquery-react-autocomplete
-A stable horizontal date picker with the option to scroll for web
-![Example](https://i.imgur.com/BaNEgIS.png?1)
+A react autocomplete using your loved one jQuery
+![Example](https://i.imgur.com/DZIbceF.png?1)
 
 ### Installation
 
@@ -16,21 +16,20 @@ Run `yarn add jquery-react-autocomplete`
 
 Import:
 
-`import ReactHorizontalDatePicker from "jquery-react-autocomplete";`
+`import JqueryReactAutocomplete from "jquery-react-autocomplete";`
 
 and use as:
 
 ```javascript
-<ReactHorizontalDatePicker selectedDay={onSelectedDay} enableScroll={true} enableDays={80}/>
+<JqueryAutocomplete inputProps={{id : 'sourceCity',label:'City: ',value:sourceCity.label || ''}} onSourceSelect={handleSourceCitySelect}/>
 ```
 
 Available Props are
 
-| Prop          | Type    | Default  | Description                                  |
-| ------------- |---------| ---------| -------------------------------------------- |
-| enableScroll  | Boolean | false    | Set List to be scrollable                    |
-| selectedDay   | Function|          | Function to get the selected Day             |
-| enableDays    | Number  |   90     | Number of days to render from current date   |
+| Prop             | Type    | Default                                                            |
+| -------------    |---------| ------------------------------------------------------------------ |
+| inputProps       | Object  | {id : 'sourceCity',label:'City: ',value:sourceCity.label || ''}    |
+| onSourceSelect   | Function| Function to get the selected city                                  |
 
 enableDays has no effect if enableScroll is true.
 
@@ -38,13 +37,20 @@ Example:
 
 ```javascript
 function App() {
- 
-  const onSelectedDay = (d) =>{
-      console.log(d)
-  };
+  const[sourceCity,setsourceCity]  = useState({});
+
+  const handleSourceCitySelect = (value) => {
+    setsourceCity(value);
+    console.log(value);
+  }  
+
 
   return (
-    <ReactHorizontalDatePicker selectedDay={onSelectedDay} enableScroll={true} enableDays={90}/> 
+    <div className="col-sm-6 pad-3">
+    <JqueryReactAutocomplete inputProps={{id : 'sourceCity',label:'City: ',value:sourceCity.label || ''}} onSourceSelect={handleSourceCitySelect}/>
+  </div>
   );
+}
+
 }
 ```
