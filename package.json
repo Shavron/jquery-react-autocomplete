@@ -31,7 +31,7 @@
     "@babel/preset-react": "^7.7.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.3.0"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "publish": "rm -rf dist && mkdir dist &&  babel src -d dist --copy-files",
